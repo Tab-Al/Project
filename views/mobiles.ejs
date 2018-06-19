@@ -1,0 +1,79 @@
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>T-S-T Store</title>
+	<link rel="stylesheet" href="/css/welcomepage.css">
+	<link rel="stylesheet" href="/css/products.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body background="images/bkg/red2.jpg" style="margin-left: 60px; margin-right: 60px; margin-top: 30px;">
+
+
+<% include ./navbar.ejs %>
+
+
+<div class="filter">
+	<form method="get">
+		<h2 style="border-bottom: 1px dotted #FFF056;">Filter By :</h2>
+		<br>
+
+		<div class="subfilter">
+		<p>BRAND :</p>
+  	<input type="checkbox" onclick="uncheckrest()" id="allcheckbox" name="brand" value="All" checked>All<br>
+  	<input type="checkbox" id="rest1" onclick="uncheckall()" name="brand" value="Samsung">Samsung<br>
+		<input type="checkbox" id="rest2" onclick="uncheckall()" name="brand" value="Apple">Apple<br>
+		<input type="checkbox" id="rest3" onclick="uncheckall()" name="brand" value="OnePlus">OnePlus<br>
+		<input type="checkbox" id="rest4" onclick="uncheckall()" name="brand" value="Mi">Mi<br>
+    <input type="checkbox" id="rest5" onclick="uncheckall()" name="brand" value="Moto">Moto<br>
+		</div>
+
+		<div class="subfilter">
+		<p>PRICE RANGE :</p>
+		<input type="text" name="pricefrom" class="range" value="0">
+		<span style="font-size: 20px;">to</span>
+		<input type="text" name="priceto" class="range" value="100000">
+		</div>
+
+		<div class="subfilter" style="padding-bottom: 70px;">
+			<p>Discount : </p>
+			<select id="disfilter" name="discount">
+				<option value="0">More than 0%</option>
+				<option value="5">More than 5%</option>
+				<option value="10">More than 10%</option>
+				<option value="15">More than 15%</option>
+				<option value="20">More than 20%</option>
+			</select>
+		</div>
+		<br>
+		<button type="reset" class="but" style="margin-left: 0px;">Reset</button>
+		<button type="submit" class="but" style="margin-left: 0px;">Submit</button>
+	</form>
+</div>
+
+<div class="filter-list">
+	<h3>Showing Results for:</h3>
+	<p><strong>Brand : </strong><%=qs.brand%></p>
+	<p><strong>Price : </strong><%=qs.pricefrom%> to <%=qs.priceto%></p>
+	<p><strong>Discount : </strong>More than <%=qs.discount%>%</p>
+</div>
+
+<div class="products-list">
+	<br>
+			<% for(var i of filters) { %>
+				<div class="product">
+					<a href="/mobiles/<%=i.id%>/"><img src="/images/mob/<%=i.id %>.jpg" href="#" class="img" alt="I"></a>
+					<br>
+					<p><strong>Id:</strong> <%= i.id%></p>
+					<p><strong>Brand:</strong> <%= i.brand%></p>
+					<p><strong>Price:</strong> <%= i.price%></p>
+					<p><strong>Discount:</strong> <%= i.discount%>%</p>
+				</div>
+			<% } %>
+</div>
+
+<% include ./footer.ejs %>
+<script type="text/javascript" src="/js/js.js"></script>
+</body>
+<html>

@@ -1,0 +1,127 @@
+<html>
+<head>
+  	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  	<title>T-S-T Store</title>
+  	<link rel="stylesheet" href="/css/welcomepage.css">
+  	<link rel="stylesheet" href="/css/products.css">
+    <link rel="stylesheet" href="/css/checkout.css">
+  	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="margin:20px; padding: 50px; border: 5px solid #FFF056; background-color: #191919;">
+    <p id="heading">Payment Options : </p>
+    <hr>
+    <div class="order-info">
+      <p>Total Qty : <%=session.cart.totalQty%></p>
+      <br>
+      <p>Total Price : <%=session.cart.totalPrice%></p>
+      <br>
+    </div>
+    <div class="choose_method">
+      <p class="choose" onclick="choosemethod(0)">Wallet (Balance : <%=user.wallet%>)</p>
+      <br>
+      <p class="choose" onclick="choosemethod(1)">Cash on Delivery</p>
+      <br>
+      <p class="choose" onclick="choosemethod(2)">Card (Debit/Credit)</p>
+      <br>
+      </form>
+    </div>
+
+    <div class="method">
+      <%if (user.wallet < session.cart.totalPrice){%>
+          <p>Wallet Balance too LOW. Please <a href='\users'>ADD</a> money or choose other modes of payment.<p>
+      <%} else {%>
+        <p>Your Wallet Balance : <%=user.wallet%></p>
+        <p>Enter Delivery Info : </p>
+        <form action='/checkout/1' method="post">
+          <input type="text" name="username" placeholder="Your Name">
+          <br>
+          <input type="text" name="street" placeholder="House/Street No">
+          <br>
+          <input type="text" name="area" placeholder="Area Name">
+          <br>
+          <input type="text" name="landmark" placeholder="Landmark Nearby">
+          <br>
+          <input type="text" name="city" placeholder="City">
+          <br>
+          <input type="text" name="pincode" placeholder="Pincode">
+          <br>
+          <input type="submit" value="Confirm Order" class="but">
+        </form>
+      <%}%>
+    </div>
+
+    <div class="method">
+      <p>Payment will  be collected on delivery.</p>
+      <p>Enter Delivery Info : </p>
+      <form action='/checkout/2' method="post">
+        <input type="text" name="username" placeholder="Your Name">
+        <br>
+        <input type="text" name="street" placeholder="House/Street No">
+        <br>
+        <input type="text" name="area" placeholder="Area Name">
+        <br>
+        <input type="text" name="landmark" placeholder="Landmark Nearby">
+        <br>
+        <input type="text" name="city" placeholder="City">
+        <br>
+        <input type="text" name="pincode" placeholder="Pincode">
+        <br>
+        <input type="submit" value="Confirm Order" class="but">
+      </form>
+    </div>
+
+    <div class="method">
+      <form action='/checkout/3' method="post">
+        <p>Enter Card Info :</p>
+        <input type="text" name="cardname" placeholder="Name on Card">
+        <br>
+        <input type="text" name="cardno" placeholder="Card Number">
+        <br>
+        <input type="password" name="cvv" placeholder="CVV">
+        <br>
+
+        <p>Enter Delivery Info : </p>
+          <input type="text" name="username" placeholder="Your Name">
+          <br>
+          <input type="text" name="street" placeholder="House/Street No">
+          <br>
+          <input type="text" name="area" placeholder="Area Name">
+          <br>
+          <input type="text" name="landmark" placeholder="Landmark Nearby">
+          <br>
+          <input type="text" name="city" placeholder="City">
+          <br>
+          <input type="text" name="pincode" placeholder="Pincode">
+          <br>
+          <input type="submit" value="Confirm Order" class="but">
+      </form>
+    </div>
+    <br>
+  </body>
+
+<script>
+
+choosemethod(0);
+
+function choosemethod(n)
+{
+  var x = document.getElementsByClassName('choose');
+  for(var i=0;i<x.length;i++)
+  {
+    x[i].classList.remove('active');
+  }
+  x[n].classList.add('active');
+  displaymethod(n);
+
+}
+
+function displaymethod(n)
+{
+  var x = document.getElementsByClassName('method');
+  for(var i=0;i<x.length;i++)
+    x[i].style.display = "none";
+  x[n].style.display = "block";
+}
+</script>
+</html>

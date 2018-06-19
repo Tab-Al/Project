@@ -1,0 +1,38 @@
+<html>
+<head>
+	<title>Shopping Cart</title>
+	<link rel="stylesheet" href="/css/cart.css">
+	<link rel="stylesheet" href="/css/welcomepage.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body background="/images/bkg/red.jpg" style="margin-left: 60px; margin-right: 60px; margin-top: 30px;">
+
+<% include ./navbar.ejs %>
+
+<div class="main_box">
+  <div class="item" style="font-size: 40px; padding: 5px 100px;">
+    <p>Your Cart :</p>
+  </div>
+  <% for(var i of products) { %>
+  <div class="item">
+    <p>Item Name : <%=i.item.id%></p>
+    <p>Price : <%=i.price%></p>
+    <p>Qty : <%=i.qty%></p>
+  </div>
+  <% } %>
+  </div>
+  <div class="checkout_box">
+    <h2>Total Qty :   <%=totalQty%>
+    <br><br>
+    Total Price:   <%=totalPrice%>
+    <br><br>
+		Wallet Balance : <%= user.wallet %></h2>
+		<br>
+    <a class="checkout_button" href="/checkout">Buy Now</a>
+  </div>
+
+<% include ./footer.ejs %>
+<script src="/js/js.js"></script>
+</body>
+</html>

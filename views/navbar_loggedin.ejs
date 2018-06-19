@@ -1,0 +1,51 @@
+<div class="header">
+	<a href="/" class="logo" title="Go to Homepage" style="font-family">T-S-T eStore</a>
+ 	<div class="header-right">
+	    <a><%= user.username %></a>
+	    <a href="/">Signup</a>
+  </div>
+</div>
+
+<div class="navbar">
+	<div class="dropdown">
+		<button class="dropbtn" id="10">Laptops</button>
+		<div class="dropdown-content" onmouseover="changecolor(10)" onmouseout="changecolor(10)">
+			<a href="#">Best Sellers in Laptops</a>
+			<a href="#">New Arrivals in Laptops</a>
+			<a href="/laptops">View All in Laptops</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn" id="20">TVs</button>
+		<div class="dropdown-content" onmouseover="changecolor(20)" onmouseout="changecolor(20)">
+			<a href="#">Best Sellers in TV</a>
+			<a href="#">New Arrivals in TV</a>
+			<a href="#">View All in TV</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn" id="30">Mobiles</button>
+		<div class="dropdown-content" onmouseover="changecolor(30)" onmouseout="changecolor(30)">
+			<a href="#">Best Sellers in Mobiles</a>
+			<a href="#">New Arrivals in Mobiles</a>
+			<a href="#">View All in Mobiles</a>
+		</div>
+	</div>
+	<div class="dropdown">
+		<button class="dropbtn" id="40">Headphones</button>
+		<div class="dropdown-content" onmouseover="changecolor(40)" onmouseout="changecolor(40)">
+			<a href="#">Best Sellers in Headphones</a>
+			<a href="#">New Arrivals in Headphones</a>
+			<a href="#">View All in Headphones</a>
+		</div>
+	</div>
+
+	<a href="/contactus" class="dropdown">Contact Us</a>
+
+	<div id="search">
+		<form action="#" >
+			<input type="text" placeholder="Search..." name="searchterm" required>
+			<button type="submit"><i class="fa fa-search"></i></button>
+		</form>
+	</div>
+</div>

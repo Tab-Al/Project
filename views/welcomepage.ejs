@@ -1,0 +1,256 @@
+
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>T-S-T Store</title>
+	<link rel="stylesheet" href="/css/welcomepage.css" >
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+
+<body background="/images/bkg/grey3.jpg" style="margin-left: 60px; margin-right: 60px; margin-top: 30px;">
+
+<% include ./navbar.ejs %>
+
+<div class="deals">
+	<br>
+	<p id="dealheading">Laptops - Hottest Deals :</p>
+
+	<table align="center" width="80%" style="border-collapse: collapse; color: black; font-family: arial;">
+		<tr>
+			<td id="filledcolumn" style="text-align: center;"><a href="/laptops/<%= ldata[0].id%>/"><img src="/images/lap/<%= ldata[0].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/laptops/<%= ldata[1].id%>/"><img src="/images/lap/<%= ldata[1].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/laptops/<%= ldata[2].id%>/"><img src="/images/lap/<%= ldata[2].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/laptops/<%= ldata[3].id%>/"><img src="/images/lap/<%= ldata[3].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Model : </strong><%= ldata[0].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= ldata[1].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= ldata[2].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= ldata[3].id %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Brand : </strong><%= ldata[0].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= ldata[1].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= ldata[2].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= ldata[3].brand %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Price : </strong><%= ldata[0].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= ldata[1].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= ldata[2].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= ldata[3].price %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Discount : </strong><%= ldata[0].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= ldata[1].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= ldata[2].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= ldata[3].discount %>%</td>
+		</tr>
+	</table>
+	<br><br>
+	 <a href="/laptops?brand=All&pricefrom=0&priceto=100000&discount=0" id="viewall">View All</a>
+	 <br><br><br>
+</div>
+
+<div class="deals">
+	<br>
+	<br>
+	<p id="dealheading">Mobiles - Hottest Deals :</p>
+
+	<table align="center" width="80%" style="border-collapse: collapse; color: black; font-family: arial;">
+		<tr>
+			<td id="filledcolumn" style="text-align: center;"><a href="/mobiles/<%= mdata[0].id%>/"><img src="/images/mob/<%= mdata[0].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/mobiles/<%= mdata[1].id%>/"><img src="/images/mob/<%= mdata[1].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/mobiles/<%= mdata[2].id%>/"><img src="/images/mob/<%= mdata[2].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/mobiles/<%= mdata[3].id%>/"><img src="/images/mob/<%= mdata[3].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Model : </strong><%= mdata[0].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= mdata[1].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= mdata[2].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= mdata[3].id %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Brand : </strong><%= mdata[0].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= mdata[1].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= mdata[2].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= mdata[3].brand %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Price : </strong><%= mdata[0].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= mdata[1].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= mdata[2].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= mdata[3].price %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Discount : </strong><%= mdata[0].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= mdata[1].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= mdata[2].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= mdata[3].discount %>%</td>
+		</tr>
+	</table>
+	<br><br>
+	 <a href="/mobiles?brand=All&pricefrom=0&priceto=100000&discount=0" id="viewall">View All</a>
+	 <br><br><br>
+</div>
+
+<br>
+<div class="deals">
+	<br>
+	<p id="dealheading">TVs - Hottest Deals :</p>
+
+	<table align="center" width="80%" style="border-collapse: collapse; color: black; font-family: arial;">
+		<tr>
+			<td id="filledcolumn" style="text-align: center;"><a href="/tvs/<%= tdata[0].id%>/"><img src="/images/tv/<%= tdata[0].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/tvs/<%= tdata[0].id%>/"><img src="/images/tv/<%= tdata[1].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/tvs/<%= tdata[0].id%>/"><img src="/images/tv/<%= tdata[2].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/tvs/<%= tdata[0].id%>/"><img src="/images/tv/<%= tdata[3].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Model : </strong><%= tdata[0].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= tdata[1].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= tdata[2].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= tdata[3].id %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Brand : </strong><%= tdata[0].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= tdata[1].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= tdata[2].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= tdata[3].brand %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Price : </strong><%= tdata[0].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= tdata[1].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= tdata[2].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= tdata[3].price %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Discount : </strong><%= tdata[0].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= tdata[1].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= tdata[2].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= tdata[3].discount %>%</td>
+		</tr>
+	</table>
+	<br><br>
+	 <a href="#" id="viewall">View All</a>
+	 <br><br><br>
+</div>
+
+<br>
+<div class="deals">
+	<br>
+	<p id="dealheading">Headphones - Hottest Deals :</p>
+
+	<table align="center" width="80%" style="border-collapse: collapse; color: black; font-family: arial;">
+		<tr>
+			<td id="filledcolumn" style="text-align: center;"><a href="/hps/<%= hdata[0].id%>/"><img src="/images/hp/<%= hdata[0].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/hps/<%= hdata[0].id%>/"><img src="/images/hp/<%= hdata[1].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/hps/<%= hdata[0].id%>/"><img src="/images/hp/<%= hdata[2].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn" style="text-align: center;"><a href="/hps/<%= hdata[0].id%>/"><img src="/images/hp/<%= hdata[3].id %>.jpg" href="#" class="boximage" alt="I"></a></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Model : </strong><%= hdata[0].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= hdata[1].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= hdata[2].id %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Model : </strong><%= hdata[3].id %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Brand : </strong><%= hdata[0].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= hdata[1].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= hdata[2].brand %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Brand : </strong><%= hdata[3].brand %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Price : </strong><%= hdata[0].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= hdata[1].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= hdata[2].price %></td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Price : </strong><%= hdata[3].price %></td>
+		</tr>
+		<tr>
+			<td id="filledcolumn"><strong>Discount : </strong><%= hdata[0].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= hdata[1].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= hdata[2].discount %>%</td>
+			<td style="background : none;"><span>  </span></td>
+			<td id="filledcolumn"><strong>Discount : </strong><%= hdata[3].discount %>%</td>
+		</tr>
+	</table>
+	<br><br>
+	<a href="#" id="viewall">View All</a>
+	<br><br><br>
+</div>
+
+<div class="footer">
+
+	<a href="#">About Us</a>
+	<a href="contactus.html">Contact Us</a>
+	<a href="#">Our Team</a>
+	<a href="#">Site Map</a>
+	<br><br>
+	<p>2018 T-S-T Private Limited. All rights reserved.</p>
+</div>
+
+<script src="/js/js.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,36 @@
+<html>
+<head>
+	<title>SIGNUP ERROR</title>
+	<link rel="stylesheet" href="/css/contactus.css">
+	<link rel="stylesheet" href="/css/welcomepage.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body style="margin-left: 60px; margin-right: 60px; margin-top: 30px;">
+
+<% include ./navbar.ejs %>
+
+<div class="contact-box" style="color: #FFF056;">
+<fieldset style="text-align: center;">
+		<legend style="font-size: 30px;">Signup Error
+		</legend>
+		<br>
+		<a onclick="opensignup()" style="text-decoration: underline; cursor: pointer; margin-top: 0px;"><h1>TRY AGAIN</h1></a>
+    <h2>The Username you selected (<%=name%>) is already taken. <br>Please choose a different username.</h2>
+</fieldset>
+</div>
+<div class="footer">
+	<a href="#">About Us</a>
+	<a href="contactus.html">Contact Us</a>
+	<a href="#">Our Team</a>
+	<a href="#">Site Map</a>
+	<br><br>
+	<p>2018 T-S-T Private Limited. All rights reserved.</p>
+</div>
+
+
+<script src="/js/js.js">
+</script>
+</body>
+
+</html>

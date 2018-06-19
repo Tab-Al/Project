@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Contact Us</title>
+	<link rel="stylesheet" href="/css/contactus.css">
+	<link rel="stylesheet" href="/css/welcomepage.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body background="/images/bkg/red.jpg" style="margin-left: 60px; margin-right: 60px; margin-top: 30px;">
+
+<% include ./navbar.ejs %>
+
+<div class="contact-box">
+	<h1 style="text-decoration: underline;">Contact Us</h1>
+	<br>
+	<p>Call us at : +91 9717728085</p>
+	<p>Mail us at : tabish_aleem@yahoo.com or fill the form below</p>
+	<br>
+	<div class="leave-msg">
+
+	<fieldset>
+		<legend>Leave us a Message :
+		</legend>
+		<br>
+		<form style="padding-left: 30px;" action="#" method="get">
+		<input class="contact-form" type="text" name="username" placeholder="Your Name" required>
+		<br><br>
+		<input class="contact-form" type="text" name="phone" placeholder="Your Contact No" required>
+		<br><br>
+		<input class="contact-form" style="margin-Left: 0px" type="email" name="mail" placeholder="Your Email ID" required>
+		<br><br>
+		<textarea class="contact-form" style="height: 100px;" name="msg" placeholder="Your message here" required></textarea>
+		<br><br>
+		<button style="margin-Left: 0px" type="submit" class="but">Submit</button>
+	</fieldset>
+	</form>
+	</div>
+</div>
+
+
+<div class="footer">
+	<a href="#">About Us</a>
+	<a href="contactus.html">Contact Us</a>
+	<a href="#">Our Team</a>
+	<a href="#">Site Map</a>
+	<br><br>
+	<p>2018 T-S-T Private Limited. All rights reserved.</p>
+</div>
+
+
+<script src="/js/js.js">
+</script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</body>
+
+</html>
